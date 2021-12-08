@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Tailwind HomeWork</title>
     <style>
         .design {
@@ -14,16 +15,27 @@
 </head>
 <body>
     <main>
+        
         <div class="design absolute top-0 right-0 bg-red-500 w-1/2 rounded-l-3xl h-full md:w-96"></div>
-        <nav class=" w-11/12  m-8 inline grid  grid-cols-3 md:grid-cols-10 gap-2 col-span-2 z-10 font-bold">
+        <header>
+        <nav class=" md:w-11/12 md:m-8 grid grid-cols-2 md:grid-cols-10 gap-2 col-span-2 font-bold z-50">
             <img class="inline-block md:col-span-2" src="GoCorona.png" alt="">
-            <p class="inline-block md:col-start-5 self-center">HOME</p>
-            <p class="inline-block self-center">FEATURES</p>
-            <p class="inline-block self-center">SUPPORT</p>
-            <p class="inline-block self-center">ABOUT</p>
-            <button class="inline-block md:col-start-10 bg-blue-500 w-32 h-10 rounded-lg text-white font-bold">Download</button>
+            <button class="burger open justify-self-end">
+                <img src="list.png" alt="">
+            </button>
+            <button class="burger close justify-self-end">
+                <img src="close.png" alt="">
+            </button>
+            <p class="nav nav1 md:col-start-4 md:self-center text-sm">HOME</p>
+            <p class="nav nav2 md:self-center text-sm">FEATURES</p>
+            <p class="nav nav3 md:self-center text-sm">SUPPORT</p>
+            <p class="nav nav4 md:self-center text-sm">ABOUT</p>
+            <div class="nav nav5 md:col-start-9 md:col-span-2">
+            <button class=" md:col-start-9 md:col-span-2 bg-blue-500 w-32 h-10 rounded-lg text-white font-bold">Download</button>
+            </div>
         </nav>
-        <section class="m-auto section-one w-4/5 grid grid-cols-1 md:grid-cols-2 z-10">
+        </header>
+        <section class="m-auto section-one w-4/5 pt-20 grid grid-cols-1 md:grid-cols-2 z-10">
          
             <div class="justify-self-center">
                 <h1 class="text-5xl  pt-8 md:pt-20 font-extrabold">Take care of yours family’s <span class="text-blue-500">health.</span></h1>
@@ -33,11 +45,11 @@
                 
 
             </div>
-            <div class="pt-8">
-                <img class="justify-self-center aling-middle" src="section-one-dev-two.png" alt="">
+            <div class="pt-8 ">
+                <img src="section-one-dev-two.png" alt="">
             </div>
             <div class="w-80 pt-8 grid grid-cols-4 grid-rows-2">
-                <img class="row-span-2" src="play section one.png" alt="">
+                <img class="row-span-2 self-center" src="play section one.png" alt="">
                 <p class="col-span-3 text-gray-500">Stay safe with GoCorona</p>
                 <button class="col-span-3 justify-self-start font-bold">WATCH VIDEO</button>
             </div>
@@ -120,5 +132,6 @@
             <img src="footer-two.png" alt="">
         </footer>
     </main>
+    <script src="script.js"></script>
 </body>
 </html>
