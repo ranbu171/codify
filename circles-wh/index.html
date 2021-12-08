@@ -8,7 +8,7 @@
     <script>
 		var drawCircles = function (num) {
 
-			document.body.style.cssText = "width: 100vw; height: 100vh; margin: 0;";
+			document.body.style.cssText = "width: 100%; height: 100%; margin: 0;";
 			
 			var colors = ['red', 'blue', 'grey', 'green', 'yellow', 'purple', 'black']
 				for (i=0;i < num; i++){
@@ -22,8 +22,8 @@
 					document.getElementById(''+i+'').style.cssText=`width: `+diam+`vh;
 						height: `+diam+`vh;
 						position: absolute;
-						top: `+tops+`vh;
-						left: `+left+`vw;
+						top: `+tops+`%;
+						left: `+left+`%;
 						background: `+col+`;
 						border: 1px solid `+colors[Math.floor(Math.random()*colors.length)]+`;
 						border-radius: 50%;`;
