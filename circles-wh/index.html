@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Circles</title>
+    <script>
+		var drawCircles = function (num) {
+
+			document.body.style.cssText = "width: 100vw; height: 100vh; margin: 0;";
+			
+			var colors = ['red', 'blue', 'grey', 'green', 'yellow', 'purple', 'black']
+				for (i=0;i < num; i++){
+					var newDiv = document.createElement ('div');
+					newDiv.id = i;
+					document.body.append (newDiv);
+					var diam = Math.floor(Math.random()*40 +5);
+					var tops = Math.floor(Math.random()*(100-diam));
+					var left = Math.floor(Math.random()*(100-diam));
+					var col = colors[Math.floor(Math.random()*colors.length)];
+					document.getElementById(''+i+'').style.cssText=`width: `+diam+`vh;
+						height: `+diam+`vh;
+						position: absolute;
+						top: `+tops+`vh;
+						left: `+left+`vw;
+						background: `+col+`;
+						border: 1px solid `+colors[Math.floor(Math.random()*colors.length)]+`;
+						border-radius: 50%;`;
+				}
+		}
+				
+	</script>
+</head>
+<body>
+	<script>
+		drawCircles(prompt ('Данный скрипт нарисует круги в случайном порядке, в случайном месте, со случайным диаметром и цветом. Сколько кругов нужно?'));
+	</script>
+</body>
+</html>
